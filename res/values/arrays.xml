@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+
+    <!-- Messages IDs -->
+    <string-array name="group_keys">
+        <item>例行监测</item>
+        <item>普查</item>
+        <item>专项</item>
+        <item>监督抽查</item>
+    </string-array>
+    <string-array name="monitor_link_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="sample_type_array">
+        <item>奶畜养殖场开办</item>
+        <item>奶农专业生产合作社开办</item>
+        <item>乳制品生产企业开办</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/remark_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/remark_layout_height"
+        android:layout_marginTop="@dimen/item_divide_margin_left"
+        android:background="#f0f0f0">
+
+        <TextView
+            android:id="@+id/task_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:gravity="center"
+            android:text="任务名称"
+            android:textColor="@color/result_minor_text"
+            android:textSize="@dimen/font_normal_size" />
+
+        <TextView
+            android:id="@+id/remark_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_marginRight="@dimen/margin_left"
+            android:layout_toRightOf="@+id/task_name_text"
+            android:background="@drawable/task_input_bg"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_divide_margin_left"></ListView>
+
+</LinearLayout>

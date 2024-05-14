@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/remark_layout_height"
+        android:paddingTop="@dimen/title_font_margin_right"
+        android:paddingBottom="@dimen/title_font_margin_right"
+        android:background="@drawable/tittle_bg">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:background="@drawable/btn_back_selector"
+            android:gravity="center"
+            android:paddingRight="@dimen/title_font_margin_right"
+            android:text="@string/back"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_title_size" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="这是标题"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_title_size" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left"
+            android:background="@drawable/btn_green_selector"
+            android:paddingRight="@dimen/title_font_margin_right"
+            android:text="@string/back"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_title_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

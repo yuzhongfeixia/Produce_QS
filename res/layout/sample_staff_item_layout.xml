@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/remark_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/remark_layout_height">
+
+        <TextView
+            android:id="@+id/task_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:gravity="center"
+            android:text="抽样员"
+            android:textColor="@color/result_minor_text"
+            android:textSize="@dimen/font_normal_size" />
+
+        <EditText
+            android:id="@+id/forward_num_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/task_name_text"
+            android:layout_toLeftOf="@+id/send_text"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_marginRight="@dimen/item_divide_margin_left"
+            android:layout_centerInParent="true"
+            android:background="@drawable/task_input_bg"
+            android:hint="@string/forward_num_hint"
+             />
+
+        <TextView
+            android:id="@+id/send_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left"
+            android:background="@drawable/btn_green_selector"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal_size" />
+    </RelativeLayout>
+
+</LinearLayout>

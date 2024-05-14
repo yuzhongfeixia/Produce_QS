@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/remark_layout_height"
+    android:background="@drawable/tittle_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/title_font_margin_right"
+    android:paddingTop="@dimen/title_font_margin_right" >
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:background="@drawable/btn_green_selector"
+        android:text="@string/download_all_data"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/font_second_size" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/btn_switch_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_group_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/item_divide_margin_left"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/item_divide_margin_left"
+            android:text="@string/group"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_normal_size" />
+
+        <RadioButton
+            android:id="@+id/btn_switch_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_all_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/item_divide_margin_left"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/item_divide_margin_left"
+            android:text="@string/all"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_normal_size" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/btn_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_left"
+        android:background="@drawable/btn_setting_selector" />
+
+</RelativeLayout>

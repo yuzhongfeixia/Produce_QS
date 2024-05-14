@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_divide_margin_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f0f0f0"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/task_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height">
+
+                <TextView
+                    android:id="@+id/task_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/task_name"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/task_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/task_name_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/republic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/republic_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/republic"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/republic_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/republic_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/date_end_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/date_end_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/date_end__text"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/date_end_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/date_end_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/sample_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/sample_type_text"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/sample_type_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_type_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_area_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/sample_area_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/sample_area_text"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/sample_area_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_area_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_link_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/sample_link_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/sample_link_text"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/sample_link_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_link_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sender_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/sender_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/sender"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/sender_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sender_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_num_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left">
+
+                <TextView
+                    android:id="@+id/sample_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/sample_num_text"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <EditText
+                    android:id="@+id/sample_num_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_num_text"
+                    android:background="@drawable/remark_bg"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/done"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_left"
+                android:background="@drawable/btn_green_selector"
+                android:gravity="center"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f0f0f0"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/barcode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height" >
+
+                <RelativeLayout
+                    android:id="@+id/barcode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/remark_layout_height" >
+
+                    <TextView
+                        android:id="@+id/barcode_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:gravity="center"
+                        android:padding="@dimen/item_divide_margin_left"
+                        android:text="条码"
+                        android:textColor="@color/result_minor_text"
+                        android:textSize="@dimen/font_normal_size" />
+
+                    <TextView
+                        android:id="@+id/barcode_edit"
+                        style="@style/right_edittext_style"
+                        android:layout_toRightOf="@+id/barcode_text" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/complex_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/double_remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/title_font_margin_right"
+                    android:layout_toLeftOf="@+id/image" >
+
+                    <RelativeLayout
+                        android:id="@+id/sample_num_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/remark_layout_height"
+                        android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                        <TextView
+                            android:id="@+id/sample_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_left"
+                            android:gravity="center"
+                            android:text="抽样数量"
+                            android:textColor="@color/result_minor_text"
+                            android:textSize="@dimen/font_normal_size" />
+
+                        <TextView
+                            android:id="@+id/sample_num_edit"
+                            style="@style/right_edittext_style"
+                            android:layout_marginLeft="@dimen/item_divide_margin_left"
+                            android:layout_marginRight="@dimen/margin_left"
+                            android:layout_toRightOf="@+id/sample_num_text" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cardinal_num_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/remark_layout_height"
+                        android:layout_below="@+id/sample_num_layout"
+                        android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                        <TextView
+                            android:id="@+id/cardinal_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_left"
+                            android:gravity="center"
+                            android:text="抽样基数"
+                            android:textColor="@color/result_minor_text"
+                            android:textSize="@dimen/font_normal_size" />
+
+                        <TextView
+                            android:id="@+id/cardinal_num_edit"
+                            style="@style/right_edittext_style"
+                            android:layout_marginLeft="@dimen/item_divide_margin_left"
+                            android:layout_marginRight="@dimen/margin_left"
+                            android:layout_toRightOf="@+id/cardinal_num_text" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/double_remark_layout_height"
+                    android:layout_height="@dimen/double_remark_layout_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:src="@drawable/shoot" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_code_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/sample_code_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="样品编号"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_code_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_code_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height" >
+
+                <TextView
+                    android:id="@+id/sample_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="样品名称"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_name_spinner"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_name_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/coordinate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height" >
+
+                <TextView
+                    android:id="@+id/coordinate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="@string/coordinate"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/coordinate_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/coordinate_text" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/sample_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sample_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="抽样时间"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_date_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_date_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_sites_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sample_sites_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="抽样场所"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_sites_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_sites_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sample_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sample_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="抽样类型"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_type_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_type_text" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/sample_address_layout_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sample_address_layout_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="抽样地点"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+
+                <TextView
+                    android:id="@+id/sample_address_layout_detail_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_address_layout_detail_text"
+                  />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/sample_user_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sample_user_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="抽样人员"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/sample_user_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sample_user_text"
+                  />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="生鲜乳许可证号"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/purchase_permit_have_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/purchase_permit_have_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="许可证号"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/purchase_permit_have_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/purchase_permit_have_num_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/purchase_permit_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/purchase_permit_mark_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/purchase_permit_no_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/purchase_permit_mark_text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="生鲜乳准运证"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/transport_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/transport_have_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="准运证号"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/transport_have_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/transport_have_num_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transport_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/transport_mark_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/transport_no_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/transport_mark_text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="生鲜乳交接单"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/eir_status_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/eir_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="生鲜乳交接单"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/eir_status_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/eir_status_text" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <CheckBox
+                    android:id="@+id/complete_eir_have_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left" />
+
+                <TextView
+                    android:id="@+id/eir_have_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_toRightOf="@+id/complete_eir_have_check"
+                    android:gravity="center"
+                    android:text="有"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <CheckBox
+                    android:id="@+id/complete_eir_no_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/eir_have_text"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/eir_no_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_toRightOf="@+id/complete_eir_no_check"
+                    android:gravity="center"
+                    android:text="无"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+            </RelativeLayout>
+
+           
+            <RelativeLayout
+                android:id="@+id/wherebouts_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/wherebouts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="交奶去向"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/wherebouts_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/wherebouts_text" />
+            </RelativeLayout>
+            
+             <RelativeLayout
+                android:id="@+id/eir_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/eir_mark_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/eir_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/eir_mark_text" />
+            </RelativeLayout>
+            
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="受检单位情况"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/subjects_unit_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/subjects_unit_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="单位名称"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_unit_name_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/subjects_unit_name_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjects_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="通讯地址"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_address_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_address_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjects_zip_code_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_zip_code_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="邮编"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_zip_code_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_zip_code_text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="法人信息"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/subjects_legal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_legal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="法人"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_legal_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_legal_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjects_legal_tel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_legal_tel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_legal_tel_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_legal_tel_text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="受检人信息"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/subjects_contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_contact_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="联系人"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_contact_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_contact_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjects_tel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_tel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_tel_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_tel_text" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/item_divide_margin_left"
+                android:background="#008000"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/margin_left"
+                android:text="联系人信息"
+                android:textColor="@color/result_minor_text"
+                android:textSize="@dimen/font_normal_size" />
+
+            <RelativeLayout
+                android:id="@+id/subjects_cotanct_contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_contact_contact_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="联系人"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_contact_contact_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_contact_contact_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subjects_contact_tel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/remark_layout_height"
+                android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+                <TextView
+                    android:id="@+id/sunjects_contact_tel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/result_minor_text"
+                    android:textSize="@dimen/font_normal_size" />
+
+                <TextView
+                    android:id="@+id/subjects_contact_tel_edit"
+                    style="@style/right_edittext_style"
+                    android:layout_marginLeft="@dimen/item_divide_margin_left"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:layout_toRightOf="@+id/sunjects_contact_tel_text" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

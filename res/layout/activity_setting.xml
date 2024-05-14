@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/samplelist_activity_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="@dimen/sample_image_size"
+            android:layout_height="@dimen/sample_image_size"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/lable_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sample_image_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_toRightOf="@+id/head_image"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/user_name"
+            android:textSize="@dimen/font_normal_size" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sample_image_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_marginRight="@dimen/item_divide_margin_left"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_toRightOf="@+id/lable_user_name"
+            android:gravity="center|left"
+            android:lines="1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="账户"
+            android:textSize="@dimen/font_normal_size" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_unfold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/divid" />
+
+    <RelativeLayout
+        android:id="@+id/rl_cur_city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/lable_cur_city"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sample_image_size"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:gravity="center"
+            android:text="@string/cur_city"
+            android:textSize="@dimen/font_normal_size" />
+
+        <TextView
+            android:id="@+id/cur_city"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sample_image_size"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_marginRight="@dimen/item_divide_margin_left"
+            android:layout_toRightOf="@+id/lable_cur_city"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="北京"
+            android:textSize="@dimen/font_normal_size" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_unfold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/divid" />
+
+    <RelativeLayout
+        android:id="@+id/rl_change_pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lable_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/item_divide_margin_left"
+                android:gravity="center"
+                android:text="@string/change_pwd"
+                android:textSize="@dimen/font_normal_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_unfold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/divid" />
+
+    <RelativeLayout
+        android:id="@+id/rl_switch_change_pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lable_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/item_divide_margin_left"
+                android:gravity="center"
+                android:text="@string/change_pwd"
+                android:textSize="@dimen/font_normal_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/switch_open" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/divid" />
+
+    <RelativeLayout
+        android:id="@+id/rl_app_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lable_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/item_divide_margin_left"
+                android:gravity="center"
+                android:text="@string/app_info"
+                android:textSize="@dimen/font_normal_size" />
+            <TextView
+                android:id="@+id/lable_version"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/item_divide_margin_left"
+                android:gravity="center"
+                android:textSize="@dimen/font_normal_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_unfold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/divid" />
+
+    <RelativeLayout
+        android:id="@+id/rl_logout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_green_selector"
+            android:text="@string/logout"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_normal_size" />
+    </RelativeLayout>
+
+</LinearLayout>

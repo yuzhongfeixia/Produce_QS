@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">32dp</dimen>
+    <dimen name="activity_vertical_margin">32dp</dimen>
+    <dimen name="remark_layout_height">96dip</dimen>
+    <dimen name="task_progress_height">128dip</dimen>
+    <dimen name="double_remark_height">192dip</dimen>
+    <dimen name="double_remark_layout_height">208dip</dimen>
+    <dimen name="margin_left">24dip</dimen>
+    <dimen name="item_divide_margin_left">16dip</dimen>
+    <dimen name="title_font_margin_right">8dip</dimen>
+    <dimen name="sample_item_height">100dip</dimen>
+    <dimen name="sample_image_size">90dip</dimen>
+    <dimen name="divid_width">760dip</dimen>
+    <dimen name="task_item_height">72dip</dimen>
+    <dimen name="task_image_size">54dip</dimen>
+    <dimen name="login_margin_top">40dip</dimen>
+    <dimen name="font_large_size">60sp</dimen>
+    <dimen name="font_normal_size">36sp</dimen>
+    <dimen name="font_second_size">28sp</dimen>
+    <dimen name="font_small_size">32sp</dimen>
+    <dimen name="font_title_size">44sp</dimen>
+    <dimen name="login_tittle_text_size">40sp</dimen>
+    <dimen name="most_move_distance">96dip</dimen>
+    <dimen name="head_height">800dip</dimen>
+
+</resources>

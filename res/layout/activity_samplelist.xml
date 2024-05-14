@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/samplelist_activity_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/remark_layout_height"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:layout_marginTop="@dimen/item_divide_margin_left" >
+
+        <TextView
+            android:id="@+id/lable_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/task_name"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_normal_size" />
+
+        <TextView
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_divide_margin_left"
+            android:layout_toRightOf="@+id/lable_name"
+            android:background="@drawable/lable_task_name"
+            android:gravity="left|center"
+            android:inputType="none"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_normal_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/divid_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/item_divide_margin_left"
+        android:background="@drawable/divid" />
+
+    <ListView
+        android:id="@+id/list_task"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/divid" >
+    </ListView>
+
+</LinearLayout>

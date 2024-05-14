@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_left"
+    android:paddingRight="@dimen/margin_left" >
+
+    <hd.produce.security.cn.pulltorefresh.PullToRefreshExpandableListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none"
+        android:groupIndicator="@null"
+        android:listSelector="@null" >
+    </hd.produce.security.cn.pulltorefresh.PullToRefreshExpandableListView>
+
+</LinearLayout>
